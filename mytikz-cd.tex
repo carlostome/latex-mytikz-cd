@@ -1,0 +1,194 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{mytikz-cd}
+
+\begin{document}
+\title{\texttt{mytikz-cd} Sample Document}
+\author{}
+\date{}
+
+\maketitle
+
+\begin{verbatim}
+\usepackage{amssymb}
+\usepackage{mytikz-cd}
+\end{verbatim}
+
+\begin{verbatim}
+\NewDocumentCommand{\larn  }{O{}G{}} {\ar[l,bend right,start anchor=north west,end anchor=north east,swap,#2,"#2"]}
+\NewDocumentCommand{\lars  }{O{}G{}} {\ar[l,bend left,start anchor=south west,end anchor=south east,#1,"#2"]}
+\NewDocumentCommand{\lp    }{O{}G{}} {\ar[loop,#1,"#2"]}
+\NewDocumentCommand{\ulp   }{O{}G{}} {\ar[loop above,#1,"#2"]}
+\NewDocumentCommand{\rlp   }{O{}G{}} {\ar[loop right,#1,"#2"]}
+\NewDocumentCommand{\dlp   }{O{}G{}} {\ar[loop below,#1,"#2"]}
+\NewDocumentCommand{\llp   }{O{}G{}} {\ar[loop left,#1,"#2"]}
+\NewDocumentCommand{\uuar  }{O{}G{}} {\ar[uu,#1,"#2"]}
+\NewDocumentCommand{\uurar }{O{}G{}} {\ar[uur,#1,"#2"]}
+\NewDocumentCommand{\uular }{O{}G{}} {\ar[uul,#1,"#2"]}
+\NewDocumentCommand{\uurrar}{O{}G{}} {\ar[uurr,#1,"#2"]}
+\NewDocumentCommand{\uullar}{O{}G{}} {\ar[uull,#1,"#2"]}
+\NewDocumentCommand{\urrar }{O{}G{}} {\ar[urr,#1,"#2"]}
+\NewDocumentCommand{\ullar }{O{}G{}} {\ar[ull,#1,"#2"]}
+\NewDocumentCommand{\rrar  }{O{}G{}} {\ar[rr,#1,"#2"]}
+\NewDocumentCommand{\ddar  }{O{}G{}} {\ar[dd,#1,"#2"]}
+\NewDocumentCommand{\ddrar }{O{}G{}} {\ar[ddr,#1,"#2"]}
+\NewDocumentCommand{\ddlar }{O{}G{}} {\ar[ddl,#1,"#2"]}
+\NewDocumentCommand{\ddrrar}{O{}G{}} {\ar[ddrr,#1,"#2"]}
+\NewDocumentCommand{\ddllar}{O{}G{}} {\ar[ddll,#1,"#2"]}
+\NewDocumentCommand{\dddrar}{O{}G{}} {\ar[dddr,#1,"#2"]}
+\NewDocumentCommand{\drrar }{O{}G{}} {\ar[drr,#1,"#2"]}
+\NewDocumentCommand{\dllar }{O{}G{}} {\ar[dll,#1,"#2"]}
+\NewDocumentCommand{\llar  }{O{}G{}} {\ar[ll,#1,"#2"]}
+\end{verbatim}
+
+\begin{verbatim}
+\[
+  \begin{tikzcd}
+    P \dar \pbcorner \rar & A \dar \\
+    B                \rar & C
+  \end{tikzcd} \qquad
+  \begin{tikzcd}
+    C \dar \pocorner \rar & A \dar \\
+    B                \rar & P
+  \end{tikzcd}
+\]
+\end{verbatim}
+%
+\[
+  \begin{tikzcd}
+    P \dar \pbcorner \rar & A \dar \\
+    B                \rar & C
+  \end{tikzcd} \qquad
+  \begin{tikzcd}
+    C \dar \pocorner \rar & A \dar \\
+    B                \rar & P
+  \end{tikzcd}
+\]
+
+\begin{verbatim}
+\setlength{\tinycolumnsep}{0.6em}
+\setlength{\smallcolumnsep}{1.2em}
+\setlength{\scriptsizecolumnsep}{1.8em}
+\setlength{\normalcolumnsep}{2.4em}
+\setlength{\largecolumnsep}{3.6em}
+\setlength{\hugecolumnsep}{4.8em}
+
+\setlength{\tinyrowsep}{0.45em}
+\setlength{\smallrowsep}{0.9em}
+\setlength{\scriptsizerowsep}{1.35em}
+\setlength{\normalrowsep}{1.8em}
+\setlength{\largerowsep}{2.7em}
+\setlength{\hugerowsep}{3.6em}
+\end{verbatim}
+
+\begin{verbatim}
+\[
+  \begin{tikzcd}
+    A \dar{t}  \rar{t}  &[\tinycolumnsep]
+    B \dar{t}  \rar{s}  &[\smallcolumnsep]
+    C \dar{t}  \rar{ss} &[\scriptsizecolumnsep]
+    D \dar{t}  \rar{n}  &[\normalcolumnsep]
+    E \dar{t}  \rar{l}  &[\largecolumnsep]
+    F \dar{t}  \rar{h}  &[\hugecolumnsep]
+    G \dar{t}           \\[\tinyrowsep]
+    A \dar{s}  \rar{t}  &
+    B \dar{s}  \rar{s}  &
+    C \dar{s}  \rar{ss} &
+    D \dar{s}  \rar{n}  &
+    E \dar{s}  \rar{l}  &
+    F \dar{s}  \rar{h}  &
+    G \dar{s}           \\[\smallrowsep]
+    A \dar{ss} \rar{t}  &
+    B \dar{ss} \rar{s}  &
+    C \dar{ss} \rar{ss} &
+    D \dar{ss} \rar{n}  &
+    E \dar{ss} \rar{l}  &
+    F \dar{ss} \rar{h}  &
+    G \dar{ss}          \\[\scriptsizerowsep]
+    A \dar{n}  \rar{t}  &
+    B \dar{n}  \rar{s}  &
+    C \dar{n}  \rar{ss} &
+    D \dar{n}  \rar{n}  &
+    E \dar{n}  \rar{l}  &
+    F \dar{n}  \rar{h}  &
+    G \dar{n}           \\[\normalrowsep]
+    A \dar{l}  \rar{t}  &
+    B \dar{l}  \rar{s}  &
+    C \dar{l}  \rar{ss} &
+    D \dar{l}  \rar{n}  &
+    E \dar{l}  \rar{l}  &
+    F \dar{l}  \rar{h}  &
+    G \dar{l}           \\[\largerowsep]
+    A \dar{h}  \rar{t}  &
+    B \dar{h}  \rar{s}  &
+    C \dar{h}  \rar{ss} &
+    D \dar{h}  \rar{n}  &
+    E \dar{h}  \rar{l}  &
+    F \dar{h}  \rar{h}  &
+    G \dar{h}           \\[\hugerowsep]
+    A          \rar{t}  &
+    B          \rar{s}  &
+    C          \rar{ss} &
+    D          \rar{n}  &
+    E          \rar{l}  &
+    F          \rar{h}  &
+    G
+  \end{tikzcd}
+\]
+\end{verbatim}
+%
+\[
+  \begin{tikzcd}
+    A \dar{t}  \rar{t}  &[\tinycolumnsep]
+    B \dar{t}  \rar{s}  &[\smallcolumnsep]
+    C \dar{t}  \rar{ss} &[\scriptsizecolumnsep]
+    D \dar{t}  \rar{n}  &[\normalcolumnsep]
+    E \dar{t}  \rar{l}  &[\largecolumnsep]
+    F \dar{t}  \rar{h}  &[\hugecolumnsep]
+    G \dar{t}           \\[\tinyrowsep]
+    A \dar{s}  \rar{t}  &
+    B \dar{s}  \rar{s}  &
+    C \dar{s}  \rar{ss} &
+    D \dar{s}  \rar{n}  &
+    E \dar{s}  \rar{l}  &
+    F \dar{s}  \rar{h}  &
+    G \dar{s}           \\[\smallrowsep]
+    A \dar{ss} \rar{t}  &
+    B \dar{ss} \rar{s}  &
+    C \dar{ss} \rar{ss} &
+    D \dar{ss} \rar{n}  &
+    E \dar{ss} \rar{l}  &
+    F \dar{ss} \rar{h}  &
+    G \dar{ss}          \\[\scriptsizerowsep]
+    A \dar{n}  \rar{t}  &
+    B \dar{n}  \rar{s}  &
+    C \dar{n}  \rar{ss} &
+    D \dar{n}  \rar{n}  &
+    E \dar{n}  \rar{l}  &
+    F \dar{n}  \rar{h}  &
+    G \dar{n}           \\[\normalrowsep]
+    A \dar{l}  \rar{t}  &
+    B \dar{l}  \rar{s}  &
+    C \dar{l}  \rar{ss} &
+    D \dar{l}  \rar{n}  &
+    E \dar{l}  \rar{l}  &
+    F \dar{l}  \rar{h}  &
+    G \dar{l}           \\[\largerowsep]
+    A \dar{h}  \rar{t}  &
+    B \dar{h}  \rar{s}  &
+    C \dar{h}  \rar{ss} &
+    D \dar{h}  \rar{n}  &
+    E \dar{h}  \rar{l}  &
+    F \dar{h}  \rar{h}  &
+    G \dar{h}           \\[\hugerowsep]
+    A          \rar{t}  &
+    B          \rar{s}  &
+    C          \rar{ss} &
+    D          \rar{n}  &
+    E          \rar{l}  &
+    F          \rar{h}  &
+    G
+  \end{tikzcd}
+\]
+\end{document}

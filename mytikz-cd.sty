@@ -1,0 +1,65 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mytikz-cd}
+
+\DeclareOption*{\PackageWarningNoLine{mytikz-cd}{Unknown option: `\CurrentOption'}}
+
+\ProcessOptions\relax
+
+\RequirePackage{tikz-cd}%
+\RequirePackage{xparse}%
+
+\NewDocumentCommand{\larn  }{O{}G{}} {\ar[l,bend right,start anchor=north west,end anchor=north east,swap,#2,"#2"]}
+\NewDocumentCommand{\lars  }{O{}G{}} {\ar[l,bend left,start anchor=south west,end anchor=south east,#1,"#2"]}
+\NewDocumentCommand{\lp    }{O{}G{}} {\ar[loop,#1,"#2"]}
+\NewDocumentCommand{\ulp   }{O{}G{}} {\ar[loop above,#1,"#2"]}
+\NewDocumentCommand{\rlp   }{O{}G{}} {\ar[loop right,#1,"#2"]}
+\NewDocumentCommand{\dlp   }{O{}G{}} {\ar[loop below,#1,"#2"]}
+\NewDocumentCommand{\llp   }{O{}G{}} {\ar[loop left,#1,"#2"]}
+\NewDocumentCommand{\uuar  }{O{}G{}} {\ar[uu,#1,"#2"]}
+\NewDocumentCommand{\uurar }{O{}G{}} {\ar[uur,#1,"#2"]}
+\NewDocumentCommand{\uular }{O{}G{}} {\ar[uul,#1,"#2"]}
+\NewDocumentCommand{\uurrar}{O{}G{}} {\ar[uurr,#1,"#2"]}
+\NewDocumentCommand{\uullar}{O{}G{}} {\ar[uull,#1,"#2"]}
+\NewDocumentCommand{\urrar }{O{}G{}} {\ar[urr,#1,"#2"]}
+\NewDocumentCommand{\ullar }{O{}G{}} {\ar[ull,#1,"#2"]}
+\NewDocumentCommand{\rrar  }{O{}G{}} {\ar[rr,#1,"#2"]}
+\NewDocumentCommand{\ddar  }{O{}G{}} {\ar[dd,#1,"#2"]}
+\NewDocumentCommand{\ddrar }{O{}G{}} {\ar[ddr,#1,"#2"]}
+\NewDocumentCommand{\ddlar }{O{}G{}} {\ar[ddl,#1,"#2"]}
+\NewDocumentCommand{\ddrrar}{O{}G{}} {\ar[ddrr,#1,"#2"]}
+\NewDocumentCommand{\ddllar}{O{}G{}} {\ar[ddll,#1,"#2"]}
+\NewDocumentCommand{\dddrar}{O{}G{}} {\ar[dddr,#1,"#2"]}
+\NewDocumentCommand{\drrar }{O{}G{}} {\ar[drr,#1,"#2"]}
+\NewDocumentCommand{\dllar }{O{}G{}} {\ar[dll,#1,"#2"]}
+\NewDocumentCommand{\llar  }{O{}G{}} {\ar[ll,#1,"#2"]}
+
+\NewDocumentCommand{\pbcorner}{}{\ar[dr,phantom,"\ulcorner",very near start]}
+\NewDocumentCommand{\pocorner}{}{\ar[dr,phantom,"\lrcorner",very near end  ]}
+
+\newlength{\tinycolumnsep}
+\newlength{\smallcolumnsep}
+\newlength{\scriptsizecolumnsep}
+\newlength{\normalcolumnsep}
+\newlength{\largecolumnsep}
+\newlength{\hugecolumnsep}
+
+\newlength{\tinyrowsep}
+\newlength{\smallrowsep}
+\newlength{\scriptsizerowsep}
+\newlength{\normalrowsep}
+\newlength{\largerowsep}
+\newlength{\hugerowsep}
+
+\setlength{\tinycolumnsep}{0.6em}
+\setlength{\smallcolumnsep}{1.2em}
+\setlength{\scriptsizecolumnsep}{1.8em}
+\setlength{\normalcolumnsep}{2.4em}
+\setlength{\largecolumnsep}{3.6em}
+\setlength{\hugecolumnsep}{4.8em}
+
+\setlength{\tinyrowsep}{0.45em}
+\setlength{\smallrowsep}{0.9em}
+\setlength{\scriptsizerowsep}{1.35em}
+\setlength{\normalrowsep}{1.8em}
+\setlength{\largerowsep}{2.7em}
+\setlength{\hugerowsep}{3.6em}
